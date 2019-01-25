@@ -1,0 +1,7 @@
+<div *ngIf="!characters" class="loading">Loading data...</div>
+<div *ngIf="characters?.length">
+  <ul class="character-list">
+    <li *ngFor="let character of characters" routerLink="{{character.id}}" class="character">{{character.name}}</li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+<div *ngIf="!character" class="loading">Loading data...</div>
+<div *ngIf="character" class="character-details">
+  <h1>{{character?.name}}</h1>
+  <p>{{character?.description}}</p>
+  <h3>Stories</h3>
+  <ul *ngIf="character?.stories?.items?.length">
+    <li *ngFor="let story of character.stories.items">{{story.name}}</li>
+  </ul>
+</div>
